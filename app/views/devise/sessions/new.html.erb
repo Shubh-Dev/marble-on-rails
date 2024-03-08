@@ -1,29 +1,33 @@
-<div class="h-screen p-2 bg-cover" style="background-image: url('<%=image_url('background.jpg') %>');">
-  <div class="border border-blue-800 bg-[#2e3230] rounded-md max-w-min mx-auto my-auto p-4">
-<h2 class="text-2xl text-[#cacccc]">Log in</h2>
+<div class="h-screen p-2 bg-[#0084a8] flex items-center justify-center">
+  <div class="border border-blue-800 bg-[#ffffff] rounded-md max-w-min p-6">
+<h2 class="text-2xl text-center text-gray-600">Login</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field text-[#cacccc]">
+<div class="flex flex-col gap-3">
+  <div class="field text-xs text-gray-600">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field text-[#cacccc]">
+  <div>
+  <div class="field text-xs text-gray-600">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field text-[#cacccc]">
+    <div class="field text-xs text-gray-600 mt-1">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
+  </div>
 
-  <div class="actions text-[#cacccc]">
-    <%= f.submit "Log in" %>
+  <div class="actions border text-center p-2 cursor-pointer bg-[#007498] text-white">
+    <%= f.submit "LOG IN" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>
 </div>

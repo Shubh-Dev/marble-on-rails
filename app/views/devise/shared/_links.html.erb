@@ -3,15 +3,26 @@
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+<div class="mt-6 flex items-center gap-1 text-xs justify-center">
+  <p class="text-center text-gray-600">Don't have an account? </p>
+  <div class="cursor-pointer text-[#007498]">
   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+  </div>
+</div>
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+  <div class="flex items-center gap-1 text-xs justify-center">
+   <p class="text-center text-gray-600">Forgot password? </p>
+   <div class="cursor-pointer text-[#007498]">
+    <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+   </div>
+  </div>
 <% end %>
-
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+  <div class="text-xs text-center text-[#007498] mt-2">
+   <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+  </div>
 <% end %>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>

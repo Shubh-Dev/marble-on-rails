@@ -3,7 +3,6 @@
 # Controller for handling dashboard-related actions.
 class DashboardController < ApplicationController
   def index
-    @message = "Hello World
-    "
+    @user = current_user
   end
 end

@@ -1,6 +1,6 @@
 <div class="h-screen p-2 bg-[#0084a8] flex items-center justify-center">
   <div class="border border-blue-800 bg-[#ffffff] rounded-md max-w-min p-6">
-    <h2 class="text-2xl text-center text-gray-600">Login</h2>
+    <h2 class="text-2xl text-center mb-4 text-gray-600">Login</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="flex flex-col gap-3">
       <div class="field text-xs text-gray-600">
@@ -16,7 +16,7 @@
         <div class="field text-xs text-gray-600 mt-1"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
         <% end %>
       </div>
-      <div class="actions border text-center p-2 cursor-pointer bg-[#007498] text-white"><%= f.submit "LOG IN" %></div>
+      <div class="actions text-center p-2 cursor-pointer bg-[#007498] text-white"><%= f.submit "LOG IN" %></div>
       <% end %>
     </div>
     <%= render "devise/shared/links" %>

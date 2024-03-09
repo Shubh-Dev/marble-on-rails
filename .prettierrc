@@ -1,0 +1,13 @@
+{
+  "overrides": [
+    {
+      "files": ["**/*.html.erb"],
+      "options": {
+        "parser": "html",
+        "semi": false,
+        "singleQuote": false,
+        "printWidth": 120
+      }
+    }
+  ]
+}

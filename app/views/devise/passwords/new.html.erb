@@ -11,7 +11,9 @@
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
-      <div class="actions  text-center p-2 cursor-pointer bg-[#007498] text-white"><%= f.submit "SEND ME INSTRUCTIONS" %></div>
+      <div class="actions text-center p-2 cursor-pointer bg-[#007498] text-white">
+        <%= f.submit "SEND ME INSTRUCTIONS" %>
+      </div>
     </div>
     <% end %> <%= render "devise/shared/links" %>
   </div>

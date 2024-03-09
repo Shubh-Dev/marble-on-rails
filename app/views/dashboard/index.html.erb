@@ -1,4 +1,9 @@
-<h1 class="mt-8">Dashboard Index</h1>
-<div class="border border-red-700">
- Hello world
+<div class="p-4">
+  <div class="w-full h-full border border-red-700 flex justify-between items-center">
+    <p>This is Dashboard</p>
+    <p>you are logged in as <%= @user.email %></p>
+    <% if user_signed_in? %>
+    <p><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></p>
+    <% end %>
+  </div>
 </div>

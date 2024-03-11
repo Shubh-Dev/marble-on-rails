@@ -41,5 +41,13 @@ module MarbleOnRails
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    # config.to_prepare do
+    #   Devise::SessionsController.layout 'devise'
+    #   Devise::RegistrationsController.layout 'devise'
+    #   Devise::ConfirmationsController.layout 'devise'
+    #   Devise::UnlocksController.layout 'devise'
+    #   Devise::PasswordsController.layout 'devise'
+    #   Devise::Mailer.layout 'devise'
+    # end
   end
 end

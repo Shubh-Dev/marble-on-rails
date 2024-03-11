@@ -9,35 +9,29 @@
 
   <body class="bg-[#E2E2E2]">
     <div class="grid grid-cols-[1fr,5fr] h-screen m-4">
-      <!-- Sidebar -->
       <div class="bg-white rounded-tl-3xl rounded-bl-3xl">
         <div class="text-white p-4 rounded-3xl h-full" style="background: linear-gradient(to bottom, #5195ae, #4a6fba)">
           <div class="h-20 flex items-center border-b mb-4">
             <p>Logo</p>
           </div>
-          <!-- Sidebar content -->
           <% NAV_ITEMS.each do |nav_item| %>
           <div class="flex items-center mb-4 gap-2">
             <i class="<%= nav_item[:icon] %> text-sm"></i>
-            <a href="<%= nav_item[:path] %>" class="font-bold"><%= nav_item[:name] %></a>
+            <%= link_to nav_item[:path], class: 'font-medium' do %> <%= nav_item[:name] %>
+            <%end%>
           </div>
           <% end %>
-          <!-- Add links or other content for the sidebar -->
         </div>
       </div>
-
-      <!-- Main Content Area -->
-      <%#
-      <div class="flex-1 flex flex-col overflow-hidden">
-        %>
-        <main class="bg-white rounded-tr-3xl rounded-br-3xl">
-          <%= yield %>
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </main>
-        <%#
-      </div>
-      %>
+      <main class="bg-white rounded-tr-3xl rounded-br-3xl p-4">
+        <div class="w-full flex justify-between items-center">
+          <p>Hello</p>
+          <p><%= link_to "Sign-out", destroy_user_session_path, method: :delete %></p>
+        </div>
+        <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </main>
     </div>
     <script src="https://kit.fontawesome.com/47dde31bb9.js" crossorigin="anonymous"></script>
   </body>

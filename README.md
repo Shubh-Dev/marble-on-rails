@@ -25,3 +25,6 @@ Things you may want to cover:
 
 <!-- bundle exec rubocop app/views/**/*.html.erb -->
 <!-- npx prettier --write . -->
+<!-- sidenav color start #5195AE (top) to #4A6FBA (bottom)  -->
+<!-- sidenav text #FAFCFD -->
+<!-- dashbooard extreme background #E2E2E2 -->

@@ -31,6 +31,15 @@ gem 'tailwindcss-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# datatable
+gem 'datatables-rails'
+
+# kaminari
+gem 'kaminari'
+
+# ransack
+gem 'ransack'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

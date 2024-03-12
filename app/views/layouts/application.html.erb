@@ -17,8 +17,7 @@
           <% NAV_ITEMS.each do |nav_item| %>
           <div class="flex items-center mb-4 gap-2">
             <i class="<%= nav_item[:icon] %> text-sm"></i>
-            <%= link_to nav_item[:path], class: 'font-medium' do %> <%= nav_item[:name] %>
-            <%end%>
+            <%= link_to nav_item[:path], class: 'font-medium' do %> <%= nav_item[:name] %> <%end%>
           </div>
           <% end %>
         </div>

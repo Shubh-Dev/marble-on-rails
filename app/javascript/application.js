@@ -4,6 +4,6 @@ import "@hotwired/turbo-rails";
 import "controllers";
 
 import "./add_jquery.js";
-import { Tabulator } from "tabulator-tables";
+
+import { TabulatorFull as Tabulator } from "tabulator-tables";
 window.Tabulator = Tabulator;
-console.log("Tabulator loaded");

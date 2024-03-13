@@ -28,3 +28,8 @@ Things you may want to cover:
 <!-- sidenav color start #5195AE (top) to #4A6FBA (bottom)  -->
 <!-- sidenav text #FAFCFD -->
 <!-- dashbooard extreme background #E2E2E2 -->
+
+<!-- foreman start -f Procfile.dev -->
+
+
+<!-- Progress: removed Tabulator using yarn and installed using npm. but still same error in the console. -->
